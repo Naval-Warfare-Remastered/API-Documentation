@@ -33,7 +33,7 @@ The Global API contains the following;
 ## Utilities
 The Utilities library comes with the following functions:
 
-### Instance
+#### Instance
 Creates a New Instance.
 ```lua
 Utilities.Instance(Instance <ClassName>, [Optional] Parent <Instance>, [Optional] Name <string>, [Optional] Properties <Dictionary>)
@@ -42,7 +42,7 @@ Utilities.Instance(Instance <ClassName>, [Optional] Parent <Instance>, [Optional
 Utilities.Instance("Part", workspace, "ExamplePart", {Size = Vector3.new(5, 5, 5)}); -- Creates a part in workspace.
 ```
 
-### ClearDirectory
+#### ClearDirectory
 Clears all objects inside a certain object. Ignores objects listed in `Globals.DO_NOT_CLEAR`
 ```lua
 Utilities.ClearDirectory(Directory <Instance>)
@@ -51,11 +51,92 @@ Utilities.ClearDirectory(Directory <Instance>)
 Utilities.ClearDirectory(workspace); -- Clears the workspace.
 ```
 
-### QuickTween
+#### QuickTween
 Performs a one-time tween on an object and removes the tween after.
 ```lua
 Utilities.QuickTween(Object <Instance>, Properties <Dictionary>, [Optional] TweenSettings <TweenInfo>, [Optional] DestroyOnComplete <bool>, [Optional] OnFinish <function>)
 
 -- Example:
 Utilities.QuickTween(workspace.Part, {Size = Vector3.new(1, 1, 1)}); -- Fades a parts size to 1x1x1.
+```
+
+## Resources
+The Resources library comes with the following functions:
+
+#### GetInstance
+Clones an instance in the resource folder and returns it.
+```lua
+Resouces.GetInstance(Type <string>, Name <string>)
+
+-- Example:
+Resouces.GetInstance("Image", "TestImage").Parent = workspace; -- Copies an image called TestImage and sends it to workspace.
+```
+
+#### GetInstanceDirect
+Returns the direct instance without cloning. **BE CAREFUL, DO NOT MODIFY THE RETURNED INSTANCE, ONLY READ.**
+```lua
+Resouces.GetInstanceDirect(Type <string>, Name <string>)
+
+-- Example:
+print(Resouces.GetInstance("Image", "TestImage").Texture) -- Prints the texture of "TestImage".
+```
+
+## ModuleLoader
+The ModuleLoader library comes with the following functions:
+
+#### DeployModule
+Deploys a module file.
+```lua
+ModuleLoader.DeployModule(Module <ModuleScript>)	
+
+-- Example:
+ModuleLoader.DeployModule(script.Client); -- Deploys the client module.
+```
+
+#### GetModuleFunction
+Returns the source function of a module.
+```lua
+ModuleLoader.GetModuleFunction(Module <ModuleScript>)
+
+-- Example:
+print(string.dump(ModuleLoader.GetModuleFunction(script.Client))); -- Dumps the client module.
+```
+
+## Debug
+The Debug library comes with the following functions:
+
+#### Log
+Prints to the output.
+```lua
+Debug.Log(Text <string>, [Optional] SubText <string>)
+
+-- Example:
+Debug.Log("Hello world!");
+```
+
+#### Warn
+Prints to the output in yellow.
+```lua
+Debug.Warn(Text <string>, [Optional] SubText <string>)
+
+-- Example:
+Debug.Warn("Hello world!");
+```
+
+#### Info
+Prints to the output in blue.
+```lua
+Debug.Info(Text <string>, [Optional] SubText <string>)
+
+-- Example:
+Debug.Info("Hello world!");
+```
+
+#### Error
+Prints to the output in red.
+```lua
+Debug.Error(Text <string>, [Optional] SubText <string>)
+
+-- Example:
+Debug.Error("Hello world!");
 ```
