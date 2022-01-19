@@ -18,7 +18,7 @@ The Global API contains the following;
 #### Global
 - `Constants` [Table of Constants]
 - `Globals` [Table of Globals]
-- `Pipeline` [Library for Server-Client Communication]
+- `Pipeline` [Library for Server-Client Communication] // WORK IN PROGRESS //
 - `Utilities` [Library for random utility functions]
 - `Debug` [Library for logging events]
 - `Resources` [Library for accessing the built in content provider]
