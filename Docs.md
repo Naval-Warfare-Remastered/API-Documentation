@@ -37,9 +37,8 @@ The Utilities library comes with the following functions:
 Creates a New Instance.
 ```lua
 Utilities.Instance(Instance <ClassName>, [Optional] Parent <Instance>, [Optional] Name <string>, [Optional] Properties <Dictionary>)
-```
-#### Example:
-```lua
+
+-- Example:
 Utilities.Instance("Part", workspace, "ExamplePart", {Size = Vector3.new(5, 5, 5)}); -- Creates a part in workspace.
 ```
 
@@ -47,18 +46,16 @@ Utilities.Instance("Part", workspace, "ExamplePart", {Size = Vector3.new(5, 5, 5
 Clears all objects inside a certain object. Ignores objects listed in `Globals.DO_NOT_CLEAR`
 ```lua
 Utilities.ClearDirectory(Directory <Instance>)
-```
-#### Example:
-```lua
+
+-- Example:
 Utilities.ClearDirectory(workspace); -- Clears the workspace.
 ```
 
 ### QuickTween
 Performs a one-time tween on an object and removes the tween after.
 ```lua
-tilities.QuickTween(Object <Instance>, Properties <Dictionary>, [Optional] TweenSettings <TweenInfo>, [Optional] DestroyOnComplete <bool>, [Optional] OnFinish <function>)
-```
-#### Example:
-```lua
+Utilities.QuickTween(Object <Instance>, Properties <Dictionary>, [Optional] TweenSettings <TweenInfo>, [Optional] DestroyOnComplete <bool>, [Optional] OnFinish <function>)
+
+-- Example:
 Utilities.QuickTween(workspace.Part, {Size = Vector3.new(1, 1, 1)}); -- Fades a parts size to 1x1x1.
 ```
