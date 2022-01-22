@@ -1,5 +1,5 @@
 # Naval Warfare Remastered Global Enviroment API
-Hello, Welcome to the Naval Warfare Remastered API Documentation. This has been written by plainenglish to help other NWR developers and contributors understand the 
+Hello, Welcome to the Naval Warfare Remastered API Documentation. This has been written by plainenglish to help other NWR developers and contributors understand the chaos.
 
 ## Accessing the API
 The API is accessed by referencing the NWR entry in the \_G enviroment.
