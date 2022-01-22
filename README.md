@@ -140,3 +140,14 @@ Debug.Error(Text <string>, [Optional] SubText <string>)
 -- Example:
 Debug.Error("Hello world!");
 ```
+
+#### GetLogs
+Returns an array of logs for the peer the function is called on.
+```lua
+<Array> Debug.GetLogs()
+
+-- Example:
+for i, v in pairs(Debug.GetLogs()) do
+  print(v);
+ end
+```
