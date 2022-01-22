@@ -36,7 +36,7 @@ The Utilities library comes with the following functions:
 #### Instance
 Creates a New Instance.
 ```lua
-Utilities.Instance(Instance <ClassName>, [Optional] Parent <Instance>, [Optional] Name <string>, [Optional] Properties <Dictionary>)
+<Instance> Utilities.Instance(Instance <ClassName>, [Optional] Parent <Instance>, [Optional] Name <string>, [Optional] Properties <Dictionary>)
 
 -- Example:
 Utilities.Instance("Part", workspace, "ExamplePart", {Size = Vector3.new(5, 5, 5)}); -- Creates a part in workspace.
@@ -66,7 +66,7 @@ The Resources library comes with the following functions:
 #### GetInstance
 Clones an instance in the resource folder and returns it.
 ```lua
-Resouces.GetInstance(Type <string>, Name <string>)
+<Instance> Resouces.GetInstance(Type <string>, Name <string>)
 
 -- Example:
 Resouces.GetInstance("Image", "TestImage").Parent = workspace; -- Copies an image called TestImage and sends it to workspace.
@@ -75,7 +75,7 @@ Resouces.GetInstance("Image", "TestImage").Parent = workspace; -- Copies an imag
 #### GetInstanceDirect
 Returns the direct instance without cloning. **BE CAREFUL, DO NOT MODIFY THE RETURNED INSTANCE, ONLY READ.**
 ```lua
-Resouces.GetInstanceDirect(Type <string>, Name <string>)
+<Instance> Resouces.GetInstanceDirect(Type <string>, Name <string>)
 
 -- Example:
 print(Resouces.GetInstance("Image", "TestImage").Texture) -- Prints the texture of "TestImage".
